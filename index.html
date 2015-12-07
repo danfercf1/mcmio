@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Mcmio</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/jquery.re-slider.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/slider/jquery.re-slider.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $container = $('.container');
+            centrar($container);
+            $('.reSlider').reSlider({
+                slideShow : false,
+                width: 938,
+                loop: false,
+                orientation: 'vertical',
+                slideWidth: 938,
+                slideHeight: 589,
+                thumbnailPosition    : 'right',
+                thumbnailWidth       : 128,
+                thumbnailHeight      : 81,
+                thumbnailMaskDuration: 0
+            });
+
+            $('.reSlider-thumbnail-box').hover(function(){
+                $(this).css("overflow","visible");
+                $(this).find(".img_hover").show();
+            }, function(){
+                $(this).find(".img_hover").hide();
+                $(this).css("overflow","hidden");
+            });
+
+            $('.video').magnificPopup({
+                type: 'iframe',
+
+                iframe: {
+                    patterns: {
+                        youtube: {
+                            index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+
+                            id: 'v=', // String that splits URL in a two parts, second part should be %id%
+                            // Or null - full URL will be returned
+                            // Or a function that should return %id%, for example:
+                            // id: function(url) { return 'parsed id'; }
+
+                            src: '///www.youtube.com/embed/344KGcW0HRY?autoplay=1' // URL that will be set as a source for iframe.https://www.youtube.com/embed/344KGcW0HRY
+                        }
+                    }
+                }
+
+
+            });
+
+            $('header nav ul.izq li.vineta').hover(function(){
+                $(this).stop().animate({
+                    'margin-top': '0'
+                },500,function(){
+                    $('.mcmio_texto').stop().animate({
+                        top: '85px'
+                    }, 500, function(){
+                        $('.mcmio_texto2').stop().show().animate({
+                            top: '155px'
+                        }, 500, function(){
+                            $('.nuevo').stop().animate({
+                                top: '18px'
+                            }, 500, function(){
+
+                            });
+                        });
+                    });
+                });
+            },function(){
+                $('.mcmio_texto2').hide();
+                $(this).stop().animate({
+                    'margin-top': '-188px'
+                },500,function(){
+                    $('.mcmio_texto').stop().animate({
+                        top: '200px'
+                    }, 500, function(){
+                        $('.mcmio_texto2').stop().animate({
+                            top: '-125px'
+                        }, 500, function(){
+                            $('.nuevo').stop().animate({
+                                top: '-70px'
+                            }, 500, function(){
+
+                            });
+                        });
+                    });
+
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<header>
+    <nav class="header_links">
+        <ul class="izq">
+            <li class="vineta">
+                <span class="nuevo">
+
+                </span>
+                <span class="mcmio_texto">
+
+                </span>
+                <span class="mcmio_texto2">
+
+                </span>
+            </li>
+        </ul>
+        <ul class="der">
+            <li class="logo"></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="cont_sec">
+    <div class="container">
+        <div class="reSlider">
+            <div class="reSlider-slide-container">
+                <div class="reSlider-slides">
+                    <div class="reSlider-slide">
+                        <img src="images/slider/pas1_cont1.jpg">
+                    </div>
+                    <div class="reSlider-slide">
+                        <img src="images/slider/pas1_cont2.jpg">
+                    </div>
+                    <div class="reSlider-slide">
+                        <img src="images/slider/pas1_cont3.jpg">
+                    </div>
+                    <div class="reSlider-slide">
+                        <img src="images/slider/pas2_cont1.jpg">
+                    </div>
+                    <div class="reSlider-slide">
+                        <img src="images/slider/pas3_cont1.jpg">
+                    </div>
+                    <div class="reSlider-slide">
+                        <img src="images/slider/pas4_cont1.jpg">
+                    </div>
+                    <div class="reSlider-slide">
+                        <img src="images/slider/pas4_cont2.jpg">
+                    </div>
+                </div>
+            </div>
+            <button class="reSlider-button reSlider-prev">Prev</button>
+            <button class="reSlider-button reSlider-next">Next</button>
+
+            <div class="reSlider-thumbnail-container">
+                <div class="reSlider-thumbnail-list">
+                    <div class="reSlider-thumbnail-box">
+                        <span class="img_hover paso1_hover"></span>
+                        <span class="image_active_p1 fondo_activo"><span class="text"><span class="up">ELIGE UN</span><span class="down">PREMIUM</span></span></span></span>
+                        <div class="reSlider-thumbnail-mask "><span class="image_inactive_p1"><span class="text"><span class="up">ELIGE UN</span><span class="down">PREMIUM</span></span></span></div>
+                    </div>
+                    <div class="reSlider-thumbnail-box">
+                        <span class="img_hover paso1b_hover"></span>
+                        <span class="image_active_p1 fondo_activo"><span class="text"><span class="up">ELIGE UN</span><span class="down">DELUXE</span></span></span></span>
+                        <div class="reSlider-thumbnail-mask"><span class="image_inactive_p1"><span class="text"><span class="up">ELIGE UN</span><span class="down">DELUXE</span></span></span></div>
+                    </div>
+                    <div class="reSlider-thumbnail-box">
+                        <span class="img_hover paso1c_hover"></span>
+                        <span class="image_active_p1 fondo_activo"><span class="text"><span class="up">ELIGE UN</span><span class="down">CL&Aacute;SICO</span></span></span></span>
+                        <div class="reSlider-thumbnail-mask"><span class="image_inactive_p1"><span class="text"><span class="up">ELIGE UN</span><span class="down">CL&Aacute;SICO</span></span></span></div>
+                    </div>
+                    <div class="reSlider-thumbnail-box">
+                        <span class="img_hover paso2_hover"></span>
+                        <span class="image_active_p2 fondo_activo"><span class="text"><span class="up">ELIGE UNA</span><span class="down">BEBIDA</span></span></span></span>
+                        <div class="reSlider-thumbnail-mask"><span class="image_inactive_p2"><span class="text"><span class="up">ELIGE UNA</span><span class="down">BEBIDA</span></span></span></div>
+                    </div>
+                    <div class="reSlider-thumbnail-box">
+                        <span class="img_hover paso3_hover"></span>
+                        <span class="image_active_p3 fondo_activo"><span class="text"><span class="up">ELIGE UN</span><span class="down">COMPLEMENTO</span></span></span></span>
+                        <div class="reSlider-thumbnail-mask"><span class="image_inactive_p3"><span class="text"><span class="up">ELIGE UN</span><span class="down">COMPLEMENTO</span></span></span></div>
+                    </div>
+                    <div class="reSlider-thumbnail-box">
+                        <span class="img_hover paso4_hover"></span>
+                        <span class="image_active_p4 fondo_activo"><span class="tex_ultimo text">AGREGA</span></span>
+                        <div class="reSlider-thumbnail-mask"><span class="image_inactive_p4"><span class="tex_ultimo text">AGREGA</span></span></div>
+                    </div>
+                    <div class="reSlider-thumbnail-box">
+                        <span class="img_hover paso4b_hover"></span>
+                        <span class="image_active_p4 fondo_activo"><span class="tex_ultimo text">AGRANDA</span></span>
+                        <div class="reSlider-thumbnail-mask"><span class="image_inactive_p4"><span class="tex_ultimo text">AGRANDA</span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <nav class="footer_links">
+        <ul class="primero">
+            <li>
+                <h4>Lorem ipsum dolor sit ame</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus orci non sagittis facilisis. Vestibulum varius felis in porttitor porttitor.
+                </p>
+            </li>
+        </ul>
+        <ul class="medio"><li><a href="http://www.youtube.com/watch?v=344KGcW0HRY" class="video"></a></li></ul>
+        <ul class="ultimo"><li><a href="#"></a></li></ul>
+    </nav>
+</footer>
+<div class="hidden">
+    <div id="preload_paso_fondo0"></div>
+    <div id="preload_paso_fondo1"></div>
+    <div id="preload_paso_fondo2"></div>
+    <div id="preload_paso_fondo3"></div>
+    <div id="preload_paso_fondo4"></div>
+    <div id="preload_paso_fondo5"></div>
+    <div id="preload_paso_fondo6"></div>
+</div>
+</body>
+</html>

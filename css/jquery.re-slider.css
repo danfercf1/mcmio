@@ -1,0 +1,265 @@
+@charset "UTF-8";
+/*
+ * jQuery reSlider
+ * ver: 0.1
+ * Author: Yoshito Kogawa
+ */
+.reSlider {
+  margin-left: auto;
+  margin-right: auto; }
+
+.reSlider-slide-container {
+  overflow: hidden;
+  position: relative; }
+
+.reSlider-slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
+
+.reSlider-slide > img {
+  width: 100%;
+  height: auto; }
+
+.reSlider-thumbnail-list {
+  font-size: 0;
+  line-height: 0; }
+
+.reSlider-thumbnail-box {
+  overflow: hidden;
+  cursor: pointer;
+}
+  .reSlider-thumbnail-box > img {
+    width: 100%;
+    height: auto; }
+
+/* スライドボタン */
+.reSlider-prev.disabled, .reSlider-next.disabled {
+  opacity: 0.5; }
+
+/* オプションで変わる設定 */
+.reSlider-horizontal .reSlider-slide {
+  float: left; }
+
+.reSlider-thumbnail-right {
+  position: relative; }
+  .reSlider-thumbnail-right .reSlider-thumbnail-container {
+    bottom: 8px;
+    left: 10px;
+    position: absolute;;
+  }
+  .reSlider-thumbnail-right .reSlider-thumbnail-box {
+    margin-left: 3px;
+    position: relative;
+    float: left;
+  }
+  .reSlider-thumbnail-right .reSlider-thumbnail-list > :first-child {
+    margin-top: 0; }
+  .reSlider-thumbnail-right .reSlider-thumbnail-mask {
+    width: 100%;
+    height: 100%;
+    /*background: url(../images/mask.png);*/
+    position: absolute;
+    top: 0;
+    left: 0; }
+.reSlider-prev{
+  background: transparent url("../images/flecha_izq.png") no-repeat scroll 0 0;
+  left: -25px;
+}
+.reSlider-next{
+  background: transparent url("../images/flecha_der.png") no-repeat scroll 0 0;
+  right: -25px;
+}
+
+.reSlider-button{
+  border: 0 none;
+  height: 73px;
+  position: absolute;
+  top: 40%;
+  width: 46px;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.reSlider-thumbnail-box .image_active_p1{
+  background: transparent url("../images/btn_paso1_active.png") no-repeat scroll 0 0;
+  display: block;
+  font-size: 25px;
+  height: 81px;
+  position: relative;
+  width: 128px;
+}
+
+.reSlider-thumbnail-box .image_inactive_p1{
+  background: transparent url("../images/btn_paso1.png") no-repeat scroll 0 0;
+  display: block;
+  font-size: 25px;
+  height: 81px;
+  position: relative;
+  width: 128px;
+}
+
+.text .up{
+  font-size: 15px;
+  display: block;
+}
+
+.text .down{
+  font-size: 18px;
+  display: block;
+}
+
+.reSlider-thumbnail-box .image_active_p2{
+  background: transparent url("../images/btn_paso2_active.png") no-repeat scroll 0 0;
+  display: block;
+  font-size: 25px;
+  height: 681px;
+  position: relative;
+  width: 128px;
+}
+
+.reSlider-thumbnail-box .image_inactive_p2{
+  background: transparent url("../images/btn_paso2.png") no-repeat scroll 0 0;
+  display: block;
+  font-size: 25px;
+  height: 81px;
+  position: relative;
+  width: 128px;
+}
+
+.reSlider-thumbnail-box .image_active_p3{
+  background: transparent url("../images/btn_paso3_active.png") no-repeat scroll 0 0;
+  display: block;
+  font-size: 25px;
+  height: 81px;
+  position: relative;
+  width: 128px;
+}
+
+.reSlider-thumbnail-box .image_inactive_p3{
+  background: transparent url("../images/btn_paso3.png") no-repeat scroll 0 0;
+  display: block;
+  font-size: 25px;
+  height: 81px;
+  position: relative;
+  width: 128px;
+}
+
+.reSlider-thumbnail-box .image_active_p4{
+  background: transparent url("../images/btn_paso4_active.png") no-repeat scroll 0 0;
+  display: block;
+  font-size: 25px;
+  height: 81px;
+  position: relative;
+  width: 128px;
+}
+
+.reSlider-thumbnail-box .image_inactive_p4{
+  background: transparent url("../images/btn_paso4.png") no-repeat scroll 0 0;
+  display: block;
+  font-size: 25px;
+  height: 81px;
+  position: relative;
+  width: 128px;
+}
+
+.reSlider-thumbnail-box .text{
+  color: #fff;
+  display: block;
+  font-family: dincol-bold,sans-serif;
+  font-size: 17px;
+  height: 39px;
+  line-height: 18px;
+  padding-left: 20px;
+  padding-top: 40px;
+  position: relative;
+  text-align: center;
+  width: 92px;
+}
+
+.text .num_selec1{
+  background: transparent url("../images/circ_paso1.png") no-repeat scroll 0 0;
+  display: block;
+  height: 32px;
+  left: 45%;
+  position: absolute;
+  top: -10px;
+  width: 32px;
+}
+.text .num_selec2{
+  background: transparent url("../images/circ_paso2.png") no-repeat scroll 0 0;
+  display: block;
+  height: 32px;
+  left: 45%;
+  position: absolute;
+  top: -10px;
+  width: 32px;
+}
+.text .num_selec3{
+  background: transparent url("../images/circ_paso3.png") no-repeat scroll 0 0;
+  display: block;
+  height: 32px;
+  left: 45%;
+  position: absolute;
+  top: -10px;
+  width: 32px;
+}
+.text .num_selec4{
+  background: transparent url("../images/circ_paso4.png") no-repeat scroll 0 0;
+  display: block;
+  height: 32px;
+  left: 45%;
+  position: absolute;
+  top: -10px;
+  width: 32px;
+}
+
+.reSlider-thumbnail-box .fondo_activo{
+  display: none;
+}
+
+.reSlider-thumbnail-current .fondo_activo{
+  display: block;
+}
+
+.reSlider-thumbnail-box .img_hover{
+  height: 111px;
+  left: 0;
+  position: absolute;
+  top: -97px;
+  width: 128px;
+  display: none;
+}
+
+.reSlider-thumbnail-box .paso1_hover{
+  background: transparent url("../images/hover_paso1.jpg") no-repeat scroll 0 0;
+}
+
+.reSlider-thumbnail-box .paso1b_hover{
+  background: transparent url("../images/hover_paso1b.jpg") no-repeat scroll 0 0;
+}
+
+.reSlider-thumbnail-box .paso1c_hover{
+  background: transparent url("../images/hover_paso1c.jpg") no-repeat scroll 0 0;
+}
+
+.reSlider-thumbnail-box .paso2_hover{
+  background: transparent url("../images/hover_paso2.jpg") no-repeat scroll 0 0;
+}
+.reSlider-thumbnail-box .paso3_hover{
+  background: transparent url("../images/hover_paso3.jpg") no-repeat scroll 0 0;
+}
+
+.reSlider-thumbnail-box .paso4_hover{
+  background: transparent url("../images/hover_paso4.jpg") no-repeat scroll 0 0;
+}
+
+.reSlider-thumbnail-box .paso4b_hover{
+  background: transparent url("../images/hover_paso4b.jpg") no-repeat scroll 0 0;
+}
+
+.reSlider-thumbnail-box .tex_ultimo{
+    font-size: 18px;
+    padding-top: 56px;
+}
