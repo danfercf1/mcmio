@@ -17,7 +17,40 @@
     <script src="js/scripts.js"></script>
     <script>
 
+        function mostrar_ocultar_vineta(opcion){
+            if(opcion == 'mostrar'){
+                $('.header .header_links ul.izq li.vineta').css({'margin-top':'0px'});
+                $('.mcmio_texto').css({'top':'85px'});
+                $('.mcmio_texto2').css({'top':'155px'});
+                $('.nuevo').css({'top':'18px'});
+            }else{
+                $('.mcmio_texto2').hide();
+                $('.header .header_links ul.izq li.vineta').stop().animate({
+                    'margin-top': '-188px'
+                },500,function(){
+                    $('.mcmio_texto').stop().animate({
+                        top: '200px'
+                    }, 500, function(){
+                        $('.mcmio_texto2').stop().animate({
+                            top: '-125px'
+                        }, 500, function(){
+                            $('.nuevo').stop().animate({
+                                top: '-70px'
+                            }, 500, function(){
+
+                            });
+                        });
+                    });
+
+                });
+            }
+        }
+
         $(document).ready(function(){
+
+            $('body').click(function(){
+                mostrar_ocultar_vineta("ocultar");
+            });
             $container = $('.container');
             centrar($container);
             $('.reSlider').reSlider({
@@ -101,6 +134,8 @@
 
                 });
             });
+
+            mostrar_ocultar_vineta("mostrar");
         });
     </script>
 </head>
