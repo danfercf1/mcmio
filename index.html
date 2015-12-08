@@ -62,7 +62,7 @@
 
             });
 
-            $('header nav ul.izq li.vineta').hover(function(){
+            $('.header .header_links ul.izq li.vineta').hover(function(){
                 $(this).stop().animate({
                     'margin-top': '0'
                 },500,function(){
@@ -105,8 +105,8 @@
     </script>
 </head>
 <body>
-<header>
-    <nav class="header_links">
+<div class="header">
+    <div class="header_links">
         <ul class="izq">
             <li class="vineta">
                 <span class="nuevo">
@@ -123,10 +123,10 @@
         <ul class="der">
             <li class="logo"></li>
         </ul>
-    </nav>
-</header>
+    </div>
+</div>
 
-<section class="cont_sec">
+<div class="cont_sec">
     <div class="container">
         <div class="reSlider">
             <div class="reSlider-slide-container">
@@ -198,10 +198,10 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<footer>
-    <nav class="footer_links">
+<div class="footer">
+    <div class="footer_links">
         <ul class="primero">
             <li>
                 <h4>Lorem ipsum dolor sit ame</h4>
@@ -212,8 +212,8 @@
         </ul>
         <ul class="medio"><li><a href="http://www.youtube.com/watch?v=344KGcW0HRY" class="video"></a></li></ul>
         <ul class="ultimo"><li><a href="#"></a></li></ul>
-    </nav>
-</footer>
+    </div>
+</div>
 <div class="hidden">
     <div id="preload_paso_fondo0"></div>
     <div id="preload_paso_fondo1"></div>

@@ -5,15 +5,17 @@ function centrar($container){
 
     $header = $('.header_links');
 
-    var innerHeight = window.innerHeight;
-    var outerHeight = window.outerHeight;
+
+    var innerHeight = $(window).height();
+    //var outerHeight = window.outerHeight;
     var midH_cont = $container.height() / 2;
     var midH_win = innerHeight / 2;
 
-    var innerWidth = window.innerWidth;
-    var outerWidth = window.outerWidth;
+    var innerWidth = $(window).width();
+    //var outerWidth = window.outerWidth;
     var midW_cont = $container.width() / 2;
     var midW_win = innerWidth / 2;
+
 
     /*Centrar Container*/
 
